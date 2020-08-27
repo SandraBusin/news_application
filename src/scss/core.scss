@@ -1,0 +1,87 @@
+@import "variables";
+@import "animations";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+.hiddenNewsItem {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  animation: sliderItemDisappear;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  display: flex;
+  opacity: 0;
+}
+.activeNewsItem {
+  width: 360px;
+  visibility: visible;
+  animation: sliderItemAppear;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  background-color: #fff;
+  height: auto;
+  opacity: 1;
+
+  display: inline-flex;
+  flex-direction: column;
+  padding: 5px 0;
+  text-align: initial;
+}
+
+.sliderArrow {
+  width: 2em;
+  height: 5em;
+  background-color: $dark-gray;
+  border: 10px solid $dark-gray;
+  border-radius: 10px;
+  display: block;
+  margin: auto 1em;
+  font-size: 2em;
+  color: #fff;
+  animation: sliderArrowButtonAppear;
+  animation-duration: 3s;
+}
+
+.hiddenSliderArrowButton {
+  visibility: hidden;
+  width: 0;
+  animation: sliderArrowButtonDisappear;
+  animation-duration: 3s;
+  padding: 0;
+  margin: 0;
+}
+
+.headerLangButton {
+  min-height: inherit;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #434343;
+  border-top: 0;
+  border-bottom: 0;
+  &.activeItem {
+    background-color: $dark-gray;
+    color: #fff;
+    border: 0;
+    &:disabled {
+      background-color: red;
+    }
+  }
+  &:disabled {
+    background-color: red;
+  }
+}
+
+.errorMessageItem {
+  margin: auto;
+}
+
+@media (max-width: 575.98px) {
+  .sliderArrow {
+    width: 1em;
+    margin: auto 10px;
+    &.hiddenSliderArrowButton {
+      margin: 0;
+    }
+  }
+}

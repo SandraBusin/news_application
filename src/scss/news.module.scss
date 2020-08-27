@@ -1,0 +1,106 @@
+@import "variables";
+
+.newsThumbnailWrapper {
+  max-width: 500px;
+  border: 1px solid $dark-gray;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: center;
+  text-align: start;
+}
+
+.newsThumbnailImg {
+  width: 15em;
+  height: auto;
+  margin: 0 auto;
+}
+
+.newsListWrapper {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  width: 100%;
+  margin: auto;
+}
+
+.newsThumbnailLink {
+  text-align: end;
+  margin: 0 10px;
+  text-decoration: unset;
+  color: $dark-gray;
+  span {
+    margin: 0 5px;
+  }
+}
+.articleBackButton {
+  border: 0;
+  background-color: #fff;
+  font-size: 1em;
+  display: flex;
+  padding: 0;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  span {
+    margin: 0 5px;
+  }
+}
+.newsArticleContent {
+  font-family: inherit;
+  text-align: justify;
+  white-space: break-spaces;
+}
+
+.newsArticleWrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.newsArticleImg {
+  width: 100%;
+}
+
+.searchNewsForm {
+  margin: 2em;
+}
+
+.searchNewsInput {
+  height: 3em;
+  margin: 0 2em;
+  width: 60%;
+}
+
+.newsCategorySection {
+  border: 1px solid $dark-gray;
+  border-radius: 15px;
+  margin: 1em;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.newsThumbnailImgPlaceholder {
+  width: 10em;
+}
+
+.newsSliderListWrapper {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .searchNewsInput {
+    width: 40em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .newsThumbnailImg {
+    width: 10em;
+  }
+  .newsThumbnailImgPlaceholder {
+    width: 0;
+  }
+}

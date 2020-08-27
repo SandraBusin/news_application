@@ -1,0 +1,42 @@
+@import "animations";
+@import "variables";
+
+.active {
+  display: flex;
+  width: 75em;
+  min-width: 350px;
+}
+
+.newsSlider {
+  display: flex;
+  margin: 1em;
+}
+
+.categoryListTitle {
+  text-transform: capitalize;
+}
+
+.collapsedCategory {
+  display: none;
+}
+
+.newsCategoryCollapseBtn {
+  padding: 5px 10px;
+  border: 0;
+  color: $dark-gray;
+  background-color: #fff;
+  span {
+    font-size: 2em;
+    margin: 0 5px;
+  }
+}
+.categoryTitleLink {
+  padding: 10px;
+  min-height: inherit;
+  color: $dark-gray;
+}
+
+.categoriesNewsSectionWrapper {
+  display: flex;
+  flex-direction: column;
+}
